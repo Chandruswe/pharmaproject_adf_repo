@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "PL_test",
 	"properties": {
 		"activities": [
 			{
@@ -41,7 +41,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "PostgreSqlTable1",
+						"referenceName": "DS_PostgreSqlTable",
 						"type": "DatasetReference"
 					}
 				],
