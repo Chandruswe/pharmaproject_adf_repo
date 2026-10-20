@@ -1,0 +1,23 @@
+{
+	"name": "LS_PostgreSql_pharmaproject",
+	"properties": {
+		"annotations": [],
+		"type": "PostgreSqlV2",
+		"typeProperties": {
+			"server": "ep-late-pine-b4mora8s-pooler.c-6.us-east-2.aws.neon.tech",
+			"port": 5432,
+			"database": "neondb",
+			"username": "neondb_owner",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_Keyvault_Pharmaproject",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "postgres-password"
+			},
+			"sslMode": 2,
+			"authenticationType": "Basic"
+		}
+	}
+}
