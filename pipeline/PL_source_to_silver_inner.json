@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Lookup1",
+				"name": "Lookup_table_details_from_ctrltable",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
