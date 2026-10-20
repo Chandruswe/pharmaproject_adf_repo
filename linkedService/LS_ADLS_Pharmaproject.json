@@ -1,0 +1,10 @@
+{
+	"name": "LS_ADLS_Pharmaproject",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://pharmaprojectstorageacco.dfs.core.windows.net/"
+		}
+	}
+}
