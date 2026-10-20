@@ -1,0 +1,10 @@
+{
+	"name": "LS_Keyvault_Pharmaproject",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://Pharmaprojectkeyvault.vault.azure.net/"
+		}
+	}
+}
