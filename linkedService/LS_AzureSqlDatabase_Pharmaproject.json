@@ -1,0 +1,23 @@
+{
+	"name": "LS_AzureSqlDatabase_Pharmaproject",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "ubereatssqlserver.database.windows.net",
+			"database": "Pharmaprojectsqldb",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "sqlcaptl",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_Keyvault_Pharmaproject",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "azuresqldb-password"
+			}
+		}
+	}
+}
