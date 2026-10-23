@@ -188,7 +188,7 @@
 							"value": "@variables('start time')",
 							"type": "Expression"
 						},
-						"table_name": {
+						"tablename": {
 							"value": "@activity('Lookup_table_details_from_ctrltable').output.firstRow.bronze_table_name",
 							"type": "Expression"
 						}
