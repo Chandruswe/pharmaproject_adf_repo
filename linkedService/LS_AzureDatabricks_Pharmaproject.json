@@ -12,7 +12,8 @@
 					"type": "LinkedServiceReference"
 				},
 				"secretName": "databrickstoken"
-			}
+			},
+			"existingClusterId": "1023-050938-01ouvyxn"
 		}
 	}
 }
