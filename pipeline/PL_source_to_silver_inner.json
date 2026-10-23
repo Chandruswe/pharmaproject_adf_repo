@@ -120,6 +120,84 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "landing to bronze",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "source to landing ingestion",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Pharmaproject-repo/pharmaproject_adb_repo/landing_to_bronze",
+					"baseParameters": {
+						"landing_timestamp": {
+							"value": "@variables('start time')",
+							"type": "Expression"
+						},
+						"source_system": {
+							"value": "@activity('Lookup_table_details_from_ctrltable').output.firstRow.source_system",
+							"type": "Expression"
+						},
+						"table_name": {
+							"value": "@activity('Lookup_table_details_from_ctrltable').output.firstRow.bronze_table_name",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_AzureDatabricks_Pharmaproject",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "bronze to silver",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "landing to bronze",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Pharmaproject-repo/pharmaproject_adb_repo/bronze_to_silver",
+					"baseParameters": {
+						"landing_timestamp": {
+							"value": "@variables('start time')",
+							"type": "Expression"
+						},
+						"table_name": {
+							"value": "@activity('Lookup_table_details_from_ctrltable').output.firstRow.bronze_table_name",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_AzureDatabricks_Pharmaproject",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"parameters": {
