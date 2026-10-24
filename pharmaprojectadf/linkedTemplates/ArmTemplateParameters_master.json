@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "pharmaprojectadf"
+		},
+		"LS_ADLS_Pharmaproject_properties_typeProperties_url": {
+			"value": "https://pharmaprojectstorageacco.dfs.core.windows.net/"
+		},
+		"LS_AzureDatabricks_Pharmaproject_properties_typeProperties_existingClusterId": {
+			"value": "1023-050938-01ouvyxn"
+		},
+		"LS_AzureSqlDatabase_Pharmaproject_properties_typeProperties_server": {
+			"value": "ubereatssqlserver.database.windows.net"
+		},
+		"LS_AzureSqlDatabase_Pharmaproject_properties_typeProperties_database": {
+			"value": "Pharmaprojectsqldb"
+		},
+		"LS_AzureSqlDatabase_Pharmaproject_properties_typeProperties_userName": {
+			"value": "sqlcaptl"
+		},
+		"LS_Keyvault_Pharmaproject_properties_typeProperties_baseUrl": {
+			"value": "https://Pharmaprojectkeyvault.vault.azure.net/"
+		},
+		"LS_PostgreSql_pharmaproject_properties_typeProperties_server": {
+			"value": "ep-late-pine-b4mora8s-pooler.c-6.us-east-2.aws.neon.tech"
+		},
+		"LS_PostgreSql_pharmaproject_properties_typeProperties_database": {
+			"value": "neondb"
+		},
+		"LS_PostgreSql_pharmaproject_properties_typeProperties_username": {
+			"value": "neondb_owner"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
